@@ -1,0 +1,54 @@
+//Definindo a animação
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+    
+    to {
+        transform: scale(1.1);
+    }
+}
+    
+.button {
+    width: 90px;
+    height: 45px;
+    border: 1px solid #ffffff;
+    background-color: #eeeeee;
+    color: #4e4e4e;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    float: left;
+    animation: scale 0.1s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        transform: scale(1.01);
+        opacity: 0.7;
+        background-color: #ccc;
+        color: #242424;
+    }
+
+    &.fade-out {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.clicked {
+        background-color: #333;
+    }
+
+    &:nth-child(16), &:nth-child(17), &:nth-child(18) {
+        margin-bottom: 0;
+    }
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
